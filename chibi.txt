@@ -1,0 +1,9 @@
+library OpenFBX
+	add_files src/miniz.c src/miniz.h src/ofbx.cpp src/ofbx.h
+	header_path src expose
+
+app OpenFBX-demo
+	depend_library OpenFBX
+	depend_library imgui-framework
+	resource_path runtime
+	add_files demo/main.cpp
